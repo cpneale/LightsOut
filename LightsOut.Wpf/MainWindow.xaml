@@ -1,0 +1,52 @@
+﻿<Window x:Class="LightsOut.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LightsOut.Wpf"
+        mc:Ignorable="d"
+        Title="Lights Out" Height="600" Width="600" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Height="auto" Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button HorizontalAlignment="Left" x:Name="StartGame" IsDefault="True" Height="30" Width="60" Grid.Column="0" Grid.Row="0" Margin="5">Start</Button>
+        </Grid>
+        <UniformGrid x:Name="GameGrid" Background="White" Rows="5" Columns="5" Grid.Row="1" MouseUp="UniformGrid_MouseUp">
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+        </UniformGrid>
+    </Grid>
+</Window>

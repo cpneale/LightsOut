@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LightsOut.Engine
 {
@@ -26,7 +27,8 @@ namespace LightsOut.Engine
             var affectedCells = CalculateAffectedCells(x, y);
 
             affectedCells
-                .ForEach(row => _grid[row.X][row.Y] = !_grid[row.X][row.Y]);
+                .Where(cell => cell.X > -1 && cell.X < _size && cell.Y > -1 && cell.Y < _size).ToList()
+                .ForEach(row => _grid[row.Y][row.X] = !_grid[row.Y][row.X]);
         }
 
         private void Setup()
