@@ -37,6 +37,22 @@ public class TestGrids
                 { new bool[] { false, false, false, false, true} },
                 { new bool[] { false, false, false, true, true} }
             }
+        },
+        {
+            "10x10_x4y4",
+            new List<bool[]>()
+            {
+                { new bool[] {  false,false,false,false,false,false,false,false,false,false} },
+                { new bool[] {  false,false,false,false,false,false,false,false,false,false} },
+                { new bool[] {  false,false,false,false,false,false,false,false,false,false} },
+                { new bool[] {  false,false,false,false,true,false,false,false,false,false} },
+                { new bool[] {  false,false,false,true,true,true,false,false,false,false} },
+                { new bool[] {  false,false,false,false,true,false,false,false,false,false} },
+                { new bool[] {  false,false,false,false,false,false,false,false,false,false} },
+                { new bool[] {  false,false,false,false,false,false,false,false,false,false} },
+                { new bool[] {  false,false,false,false,false,false,false,false,false,false} },
+                { new bool[] {  false,false,false,false,false,false,false,false,false,false} }
+            }
         }
     };
 
