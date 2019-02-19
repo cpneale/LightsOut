@@ -8,11 +8,13 @@ namespace LightsOut.Engine
     {
         private int _size;
         private Random _random;
-
         private List<bool[]> _grid;
-        public IList<bool[]> Grid => _grid.AsReadOnly();
 
-        public List<Cell> PreSelectedCells { get; private set; }
+        public IList<bool[]> Grid => _grid.AsReadOnly();
+        public Enums.GameStatus GameStatus => 
+                Grid.SelectMany(cells => cells.Where(cell => cell)).Any()
+                ? Enums.GameStatus.InProgress
+                : Enums.GameStatus.PlayerOneWins;
 
         public Board(int size)
         {
@@ -29,6 +31,8 @@ namespace LightsOut.Engine
             affectedCells
                 .Where(cell => cell.X > -1 && cell.X < _size && cell.Y > -1 && cell.Y < _size).ToList()
                 .ForEach(row => _grid[row.Y][row.X] = !_grid[row.Y][row.X]);
+
+            StateChange?.Invoke(this, new EventArgs());
         }
 
         private void Setup()
@@ -46,7 +50,6 @@ namespace LightsOut.Engine
             var x = _random.Next(0, _size);
             var y = _random.Next(0, _size);
 
-            PreSelectedCells = new List<Cell>() { new Cell(x, y) };
             Grid[x][y] = true;
         }
 
@@ -63,5 +66,7 @@ namespace LightsOut.Engine
                 new Cell(x, y +1)
             };
         }
+
+        public event EventHandler StateChange;
     }
 }

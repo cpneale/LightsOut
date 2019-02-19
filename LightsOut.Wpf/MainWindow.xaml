@@ -19,10 +19,10 @@
                 <ColumnDefinition Width="auto"></ColumnDefinition>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button HorizontalAlignment="Left" x:Name="StartGame" IsDefault="True" Height="30" Width="60" Grid.Column="0" Grid.Row="0" Margin="5">Start</Button>
+            <Button Click="ResetGame_Click" HorizontalAlignment="Left" x:Name="ResetGame" IsDefault="True" Height="30" Width="60" Grid.Column="0" Grid.Row="0" Margin="5">Reset</Button>
         </Grid>
         <UniformGrid x:Name="GameGrid" Background="White" Rows="5" Columns="5" Grid.Row="1" MouseUp="UniformGrid_MouseUp">
-            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"/>
             <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
             <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
             <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>

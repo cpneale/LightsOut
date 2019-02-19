@@ -1,5 +1,7 @@
 using LightsOut.Engine;
+using LightsOut.Engine.Enums;
 using NUnit.Framework;
+using System.Collections.Generic;
 using System.Linq;
 
 public class Given_A_LightsOutBoard
@@ -25,17 +27,7 @@ public class Given_A_LightsOutBoard
 
         var testGrid = TestGrids.GetGridList(gridName);
 
-        var preselected = grid
-            .SelectMany((cells,i) => cells
-                .Select(c => new { x = i, selected = c })
-            )
-            .Select((c, i) => new { y = i % size, c.x, c.selected })
-            .Where(o => o.selected);
-
-        foreach (var cell in preselected)
-        {
-            grid[cell.x][cell.y] = false;
-        }
+        DeselectAllCells(size, grid);
 
         board.Click(x, y);
 
@@ -45,6 +37,54 @@ public class Given_A_LightsOutBoard
             {
                 Assert.IsTrue(testGrid[row][col] == grid[row][col], "Failed on square x{0}:y{1}", x, y);
             }
+        }
+    }
+
+    [Test]
+    public void When_The_State_Changes_Then_The_Event_Is_Fired()
+    {
+        var board = new Board(5);
+
+        bool eventFired = false;
+        board.StateChange += (o,e) => eventFired = true;
+
+        board.Click(1, 1);
+
+        Assert.IsTrue(eventFired);
+    }
+
+    [Test]
+    public void When_Some_Cells_Are_Turned_On_Then_Status_Equals_InProgress()
+    {
+        var board = new Board(5);
+        board.Click(1, 1);
+        //there is another test to confirm cells are selected after we initialize
+
+        Assert.AreEqual(GameStatus.InProgress, board.GameStatus);
+    }
+
+    [Test]
+    public void When_All_Cells_Are_Turned_Off_Then_Status_Equals_PlayerOneWins()
+    {
+        var board = new Board(5);
+        board.Click(1, 1);
+        DeselectAllCells(5, board.Grid);
+
+        Assert.AreEqual(GameStatus.PlayerOneWins, board.GameStatus);
+    }
+
+    private static void DeselectAllCells(int size, IList<bool[]> grid)
+    {
+        var preselected = grid
+            .SelectMany((cells, i) => cells
+                .Select(c => new { x = i, selected = c })
+            )
+            .Select((c, i) => new { y = i % size, c.x, c.selected })
+            .Where(o => o.selected);
+
+        foreach (var cell in preselected)
+        {
+            grid[cell.x][cell.y] = false;
         }
     }
 }
