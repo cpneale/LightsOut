@@ -45,7 +45,7 @@ namespace LightsOut.Wpf
             foreach (var cell in allCells)
             {
                 var rect = (Rectangle)GameGrid.Children[cell.idx];
-                rect.Fill = cell.cell ? Brushes.LimeGreen : Brushes.Gray;
+                rect.Fill = cell.cell ? Brushes.LimeGreen : Brushes.DarkGreen;
             }
         }
     }

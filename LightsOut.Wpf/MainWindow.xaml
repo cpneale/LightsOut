@@ -22,31 +22,31 @@
             <Button HorizontalAlignment="Left" x:Name="StartGame" IsDefault="True" Height="30" Width="60" Grid.Column="0" Grid.Row="0" Margin="5">Start</Button>
         </Grid>
         <UniformGrid x:Name="GameGrid" Background="White" Rows="5" Columns="5" Grid.Row="1" MouseUp="UniformGrid_MouseUp">
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
-            <Rectangle Fill="Gray" Margin="2" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
+            <Rectangle Margin="1" Stroke="Black" RadiusX="5" RadiusY="5"></Rectangle>
         </UniformGrid>
     </Grid>
 </Window>
